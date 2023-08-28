@@ -44,7 +44,6 @@ header {
   margin-left: auto;
 }
 
-
 .photo {
   display: block;
   margin-left: auto;
@@ -55,13 +54,13 @@ header {
 }
 
 .bottombar {
-  text-align: right;
-  padding: 50px 20px;
+  padding: 20px 20px;
 }
 
 .bottomtext {
   color: aqua;
   font-size: x-small;
+  text-align: justify;
   float: right;
 }
 

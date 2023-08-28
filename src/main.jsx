@@ -40,7 +40,6 @@ links.forEach((link) => {
   });
 });
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
@@ -60,21 +59,21 @@ ReactDOM.createRoot(document.getElementById('root')).render(
        <Route path="/p2" element={
         <>
           <NavigationBar />
-          <Photos2 />
+          <p className='info'> its empty </p>
         </>
       } />
 
       <Route path="/p3" element={
               <>
                 <NavigationBar />
-                <Photos3 />
+                <p className='info'> its empty </p>
               </>
             } /> 
 
       <Route path="/p4" element={
                     <>
                       <NavigationBar />
-                      <Photos4 />
+                      <p className='info'> its empty </p>
                     </>
                   } /> 
 
