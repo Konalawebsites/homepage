@@ -1,4 +1,6 @@
 /* PHOTOS */
+import react, { useState } from 'react';
+
 const photos = [
     {
         url: 'src/photos/img4.jpg',

@@ -9,6 +9,8 @@ import NavigationBar from './NavigationBar'
 import App from './App'
 import Photos1 from './Photos1'
 import Photos2 from './Photos2'
+import Photos3 from './Photos3'
+import Photos4 from './Photos4'
 
 // /* CURSOR */
 let innerCursor = document.querySelector(".inner-cursor");
@@ -45,22 +47,51 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/" element={
         <>
           <NavigationBar />
-          <App />
+          <p className='info'> welcome! </p>
         </>
 
       } />
-      <Route path="/1" element={
+      <Route path="/p1" element={
         <>
           <NavigationBar />
           <Photos1 />
         </>
       } />
-       <Route path="/2" element={
+       <Route path="/p2" element={
         <>
           <NavigationBar />
           <Photos2 />
         </>
       } />
+
+      <Route path="/p3" element={
+              <>
+                <NavigationBar />
+                <Photos3 />
+              </>
+            } /> 
+
+      <Route path="/p4" element={
+                    <>
+                      <NavigationBar />
+                      <Photos4 />
+                    </>
+                  } /> 
+
+      <Route path="/services" element={
+                          <>
+                            <NavigationBar />
+                          <p className='info'> service not found </p>
+                          </>
+                        } /> 
+
+      <Route path="/shop" element={
+                                <>
+                                  <NavigationBar />
+                                <p className='info'> shop is empty,come back tomorrw </p>
+                                </>
+                              } /> 
+
     </Routes>
   </BrowserRouter>
 )
