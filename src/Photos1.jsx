@@ -1,24 +1,24 @@
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 
 const photos = [
     {
         url: 'src/photos/frankfurt-car.png',
-        image: 'frankfurt-car', 
+        image: '"Routine"', 
         id: 0,
     },
     {
         url: 'src/photos/porche.png',
-        image: 'porche',
+        image: '"Porche"',
         id: 1,
     },
     {
         url: 'src/photos/bailar.png',
-        image: 'bailar',
+        image: '"Dance Dance Dance"',
         id: 2,
     },
     {
         url: 'src/photos/sincity.png',
-        image: 'sincity',
+        image: '"Sin City"',
         id: 3,
     },
 ]
@@ -26,14 +26,14 @@ const photos = [
 console.log('photos', photos)
 
 const photoDisplay = Object.keys(photos).map((photo) => {
-    return <img className='photo' key={photo} src={`${photos[photo].url}`} alt='photo not visible' />
+    return <img key={photo} src={`${photos[photo].url}`} alt={`${photos[photo].image}`} />
 })
 
 console.log('photodisplay', photoDisplay)
 
 const Photos1 = () => {
     return (
-        <div> 
+        <div className='photos'> 
             {photoDisplay}
         </div>
     )

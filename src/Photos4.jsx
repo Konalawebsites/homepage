@@ -1,5 +1,5 @@
 /* PHOTOS */
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 
 const photos = [
     {
@@ -22,7 +22,7 @@ const photos = [
 ]
 
 const photoDisplay = Object.keys(photos).map((photo) => {
-    return <img className='photo' key={photo} src={`${photos[photo].url}`} alt='photo not visible' />
+    return <img className='photo' key={photo} src={`${photos[photo].url}`} alt={`${photos[photo].image}`}/>
 })
 
 
