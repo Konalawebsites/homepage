@@ -20,6 +20,14 @@ const NavigationBar = () => {
             </div>
 
             <div className="dropdown">
+            <div><Link to="/cart">
+                <img className="icon" src="src/photos/shoppincart.png"/>
+                    
+                </Link>
+            </div>
+            </div>
+
+            <div className="dropdown">
             <div><Link to="/services">
                 <button className="dropbtn"><h3>Services</h3>
                 </button>

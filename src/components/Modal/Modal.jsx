@@ -9,34 +9,36 @@ const modalTxt = document.querySelector(".modalTxt")
 const close = document.querySelector(".close")
 
 
-images.forEach(image => {
-    console.log('clicked image')
-    image.addEventListener('click', () => {
-        modalImg.src = image.src;
-        modalTxt.innerHTML = image.alt;
-        console.log('image.alt', image.alt)
-        modal.classList.add("appear");
+// images.forEach(image => {
+//     console.log('clicked image')
+//     image.addEventListener('click', () => {
+//         modalImg.src = image.src;
+//         modalTxt.innerHTML = image.alt;
+//         console.log('image.alt', image.alt)
+//         modal.classList.add("appear");
 
-    close.addEventListener('click', () => {
-        modal.classList.remove("appear");
-        })
-    })
-})
+//     close.addEventListener('click', () => {
+//         modal.classList.remove("appear");
+//         })
+//     })
+// })
 
-const Modal = () => {
-    
+const Modal = ({ imageUrl, setIsModalOpen }) => {
+    console.log(imageUrl)
+
     return (
         <div className='modal'>
-        <div className='modalContent'>
-            <img src='src/photos/frankfurt-car.png' className='modalImg'/>
-            <span className='modalTxt'></span>
-            <span className='close'>
-                <img className='close-btn' src='src/photos/close.png'></img>
+            <div className='modalContent'>
+                <img src={imageUrl} className='modalImg' />
+                <span className='modalTxt'></span>
+                <span className='close'>
+                    <img onClick={() =>setIsModalOpen(false) } className='close-btn' src='src/photos/close.png'></img>
                 </span>
-        </div>
+                <button onClick={() => setIsModalOpen(false) }>close</button>
+            </div>
         </div>
 
-    )    
+    )
 }
 
 export default Modal 

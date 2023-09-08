@@ -39,9 +39,14 @@ header {
   margin-left: 0;
 }
 
+.icon {
+  width: 30px;
+  margin-left: 100px;
+}
+
 .youtube-icon {
   width: 40px;
-  margin-left: 100px;
+  margin-left: 300px;
 }
 
 .inner-cursor {
@@ -161,9 +166,6 @@ div.dropdown {
   display: -moz-grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0;
-  margin-left: 100px;
-  justify-content: center;
-  align-self: center;
 }
 
 .modal {
@@ -176,8 +178,6 @@ div.dropdown {
   color: #ffff;
   z-index: 1;
   overflow: auto;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .modal.appear {

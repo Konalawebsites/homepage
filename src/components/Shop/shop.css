@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Grayfel ;
+  box-sizing:content-box;
+  cursor: none;
+}
+
+
+body{
+  width: 100%;
+  margin:0%;
+  height: 0;
+
+  }
+
+.products {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(0, 255, 234);
+  font-size: 30px;
+  border: 0;
+  text-align: center;
+  background-color: rgba(255, 0, 0, .5);
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.product {
+  margin-bottom: 50px;
+}
+
+.image-shop {
+  width: 220px;
+  height: 220px;
+}
+
+.description-shop {
+  font: bold;
+  font-size: 25px;
+}

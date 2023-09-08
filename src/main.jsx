@@ -1,10 +1,11 @@
-  import ReactDOM from 'react-dom/client'
-  import './index.css'
-  import './bottombar.css'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import './bottombar.css'
 import {
   BrowserRouter,
   Routes, Route
 } from 'react-router-dom'
+
 import NavigationBar from './NavigationBar'
 import BottomBar from './components/BottomBar/BottomBar'
 
@@ -13,6 +14,10 @@ import Photos2 from './Photos2'
 import Photos3 from './Photos3'
 import Photos4 from './Photos4'
 import Modal from './components/Modal/Modal.jsx'
+import Shop from './components/Shop/Shop'
+import { ShopContextProvider } from './context/shop-context'
+import PRODUCTS from './components/Shop/products'
+import { Cart } from './components/Cart/cart'
 
 
 // /* CURSOR */
@@ -43,62 +48,91 @@ links.forEach((link) => {
   });
 });
 
+const photos = [
+  {
+      url: 'src/photos/frankfurt-car.png',
+      image: '"Routine"',
+      id: 0,
+  },
+  {
+      url: 'src/photos/porche.png',
+      image: '"Porche"',
+      id: 1,
+  },
+  {
+      url: 'src/photos/bailar.png',
+      image: '"Dance Dance Dance"',
+      id: 2,
+  },
+  {
+      url: 'src/photos/sincity.png',
+      image: '"Sin City"',
+      id: 3,
+  },
+]
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={
-        <>
-          <NavigationBar />
-          <p className='info'> welcome! </p>
-          <BottomBar />
+  <ShopContextProvider>
 
-        </>
+    <BrowserRouter>
 
-      } />
-      <Route path="/p1" element={
-        <>
-          <NavigationBar />
-          <Photos1 />
-          <Modal/>
-          <BottomBar />
-        </>
-      } />
-       <Route path="/p2" element={
-        <>
-          <NavigationBar />
-          <p className='info'> its empty </p>
-        </>
-      } />
+      <NavigationBar />
 
-      <Route path="/p3" element={
-              <>
-                <NavigationBar />
-                <p className='info'> its empty </p>
-              </>
-            } /> 
+      <Routes>
+        <Route path="/" element={
+          <>
+            <p className='info'> welcome! </p>
 
-      <Route path="/p4" element={
-                    <>
-                      <NavigationBar />
-                      <p className='info'> its empty </p>
-                    </>
-                  } /> 
+          </>
 
-      <Route path="/services" element={
-                          <>
-                            <NavigationBar />
-                          <p className='info'> service not found </p>
-                          </>
-                        } /> 
+        } />
+        <Route path="/p1" element={
+          <>
+            <Photos1 photos={photos}/>
+          </>
+        } />
+        <Route path="/p2" element={
+          <>
+            <p className='info'> its empty </p>
+          </>
+        } />
 
-      <Route path="/shop" element={
-                                <>
-                                  <NavigationBar />
-                                <p className='info'> shop is empty,come back tomorrw </p>
-                                </>
-                              } /> 
+        <Route path="/p3" element={
+          <>
+            <p className='info'> its empty </p>
+          </>
+        } />
 
-    </Routes>
-  </BrowserRouter>
+        <Route path="/p4" element={
+          <>
+            <NavigationBar />
+            <p className='info'> its empty </p>
+          </>
+        } />
+
+        <Route path="/services" element={
+          <>
+            <p className='info'> service not found </p>
+          </>
+        } />
+
+        <Route path="/shop" element={
+          <>
+            <Shop />
+          </>
+        } />
+
+        <Route path="/cart" element={
+          <>
+            <Cart />
+          </>
+        } />
+
+      </Routes>
+
+      <BottomBar />
+    </BrowserRouter>
+  </ShopContextProvider>
 )
