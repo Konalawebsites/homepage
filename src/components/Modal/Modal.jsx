@@ -34,7 +34,6 @@ const Modal = ({ imageUrl, setIsModalOpen }) => {
                 <span className='close'>
                     <img onClick={() =>setIsModalOpen(false) } className='close-btn' src='src/photos/close.png'></img>
                 </span>
-                <button onClick={() => setIsModalOpen(false) }>close</button>
             </div>
         </div>
 
