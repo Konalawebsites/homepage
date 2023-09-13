@@ -36,7 +36,6 @@ const Modal = ({ imageUrl, setIsModalOpen }) => {
                 </span>
             </div>
         </div>
-
     )
 }
 

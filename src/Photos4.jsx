@@ -1,36 +1,29 @@
-/* PHOTOS */
 import React, { useState } from 'react';
+import Modal from './components/Modal/Modal';
 
-const photos = [
-    {
-        url: 'src/photos/tree.jpeg',
-        image: 'feather'
-    },
-    {
-        url: 'src/photos/windturbine.jpeg',
-        image: 'windturbine'
-    },
-    {
-        url: 'src/photos/img3.jpg',
-        image: 'windturbine'
-    },
-
-    {
-        url: 'src/photos/img1.jpg',
-        image: 'pekka'
-    },
-]
-
-const photoDisplay = Object.keys(photos).map((photo) => {
-    return <img className='photo' key={photo} src={`${photos[photo].url}`} alt={`${photos[photo].image}`}/>
-})
+// const photoDisplay = Object.keys(photos).map((photo) => {
+//     return <img onClick={() => console.log("PERKELE")} key={photo} src={`${photos[photo].url}`} alt={`${photos[photo].image}`} />
+// })
 
 
-const Photos4 = () => {
+const Photos4 = ({photos4}) => {
+    const photoDisplay = Object.keys(photos4).map((photo) => {
+        return <img onClick={() => {
+            setImageUrl(photos4[photo].url)
+            setIsModalOpen(true)
+        }
+        } key={photo} src={`${photos4[photo].url}`} alt={`${photos4[photo].image}`} />
+    })
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [imageUrl, setImageUrl] = useState("")
+    console.log(isModalOpen)
     return (
-        <div>
-            {photoDisplay}
-        </div>
+        <>
+            {isModalOpen && <Modal imageUrl={imageUrl} setIsModalOpen={setIsModalOpen}/>}
+            <div className='photos'>
+                {photoDisplay}
+            </div>
+        </>
     )
 }
 
