@@ -47,10 +47,10 @@ const NavigationBar = () => {
                     <i className="fa fa-caret-down"></i>
                 </button>
                 <div className="dropdown-content">
-                    <div><Link to="/p1">Routine</Link></div>
-                    <div><Link to="/p2">TBA</Link></div>
-                    <div><Link to="/p3">TBA</Link></div>
-                    <div><Link to="/p4">TBA</Link></div>
+                    <div><Link to="/p1">Just Photos</Link></div>
+                    <div><Link to="/p2">Caparica</Link></div>
+                    <div><Link to="/p3">Teknikal Strike</Link></div>
+                    <div><Link to="/p4">Not AI generated</Link></div>
                 </div>
             
             </div>

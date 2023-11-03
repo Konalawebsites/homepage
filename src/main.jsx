@@ -55,8 +55,8 @@ const photos = [
       id: 0,
   },
   {
-      url: 'src/photos/porche.png',
-      image: '"Porche"',
+      url: 'src/photos/majakka.jpg',
+      image: '"Majakka"',
       id: 1,
   },
   {
@@ -67,6 +67,73 @@ const photos = [
   {
       url: 'src/photos/sincity.png',
       image: '"Sin City"',
+      id: 3,
+  },
+]
+
+const photos2 = [
+  {
+      url: 'src/photos/portugal/img003.jpg',
+      image: '"lets go"',
+      id: 0,
+  },
+  {
+      url: 'src/photos/portugal/img018.jpg',
+      image: '"Mystical holes"',
+      id: 1,
+  },
+  {
+      url: 'src/photos/portugal/img006.jpg',
+      image: '"Platform"',
+      id: 2,
+  },
+  {
+      url: 'src/photos/portugal/dog.jpg',
+      image: '"Portuguese dog"',
+      id: 3,
+  },
+]
+const photos3 = [
+  {
+      url: 'src/photos/suomi/jones2.jpg',
+      image: '"super electric"',
+      id: 0,
+  },
+  {
+      url: 'src/photos/suomi/sähkötorni.jpg',
+      image: '"My friend Waldorf"',
+      id: 1,
+  },
+  {
+      url: 'src/photos/suomi/structure.jpg',
+      image: '"structural design"',
+      id: 2,
+  },
+  {
+      url: 'src/photos/suomi/waldorf.jpg',
+      image: '"golfcourse"',
+      id: 3,
+  },
+]
+const photos4 = [
+  {
+      url: 'src/photos/suomi/merto.jpg',
+      image: '"super electric"',
+      id: 0,
+  },
+  {
+      url: 'src/photos/feather.jpeg',
+      image: '"My friend Waldorf"',
+      id: 1,
+  },
+  {
+      url: 'src/photos/suomi/catcar.jpg',
+      image: '"structural design"',
+      id: 2,
+  },
+  {
+      url: 'src/photos/kasa.jpg',
+      image: '"golfcourse"',
       id: 3,
   },
 ]
@@ -95,20 +162,19 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         } />
         <Route path="/p2" element={
           <>
-            <p className='info'> its empty </p>
+            <Photos2 photos2={photos2}/>
           </>
         } />
 
         <Route path="/p3" element={
           <>
-            <p className='info'> its empty </p>
+            <Photos3 photos3={photos3}/>
           </>
         } />
 
         <Route path="/p4" element={
           <>
-            <NavigationBar />
-            <p className='info'> its empty </p>
+            <Photos4 photos4={photos4}/>
           </>
         } />
 
